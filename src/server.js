@@ -5,6 +5,13 @@ import routes from './routes.js'
 const app = express()
 
 app.use(cors()) //configura o server para utilizar cors
+
+app.use(
+    express.urlencoded({
+        extended: true
+    })
+) //ler json
+
 app.use(express.json()) //para entender o json no body
 app.use(routes)
 

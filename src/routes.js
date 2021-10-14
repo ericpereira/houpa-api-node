@@ -1,10 +1,13 @@
 import express from 'express'
-import { index as indexUser } from './controllers/UsersController.js'
+import UserRoutes from './routes/UserRoutes.js'
 
 const routes = express.Router()
 
-routes.get('/', function(req, res){
-    return indexUser(req, res)
-})
+//User routes
+routes.use('/users', UserRoutes)
+
+//Product routes
+
+//Catalog routes
 
 export default routes
